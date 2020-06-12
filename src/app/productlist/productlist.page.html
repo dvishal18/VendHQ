@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Prodcut List</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col sizeLg="4" sizeMd="4" sizeXs="6" *ngFor="let temple of jsonObject; let i = index">
+        <!-- <div class="temple-wrapper" [style.background-image]="'url('+temple.image+ ')'"></div> -->
+        <div >
+          <ion-card>
+            <img class="temple-wrapper" [src]="temple.Image" />
+            <ion-card-header>
+              <ion-card-subtitle>{{temple.DetailDescription}}</ion-card-subtitle>
+              
+      <!-- <ion-card-title>{{temple.Address}}</ion-card-title> -->
+    </ion-card-header>
+    <ion-card-content>
+    <!-- {{temple.DetailDescription}} -->
+    </ion-card-content>
+          </ion-card>
+       
+      </div>
+      
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

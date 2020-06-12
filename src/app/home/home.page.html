@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <img class="img-wrapper" [src]="img" />
+    <ion-card-header>
+      <ion-card-subtitle>Adidas</ion-card-subtitle>
+      <ion-card-title>Madison, WI</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Adidas AG is a multinational corporation, founded and headquartered in Herzogenaurach, Germany, that designs and manufactures shoes, clothing and accessories. It is the largest sportswear manufacturer in Europe, and the second largest in the world, after Nike.
+    </ion-card-content>
+  </ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col sizeLg="4" sizeMd="4" sizeXs="6" *ngFor="let temple of jsonObject; let i = index">
+        <!-- <div class="temple-wrapper" [style.background-image]="'url('+temple.image+ ')'"></div> -->
+        <div routerLink="/productlist">
+          <ion-card>
+            <img class="temple-wrapper" [src]="temple.Image" />
+            <ion-card-header>
+              <ion-card-subtitle>{{temple.Name}}</ion-card-subtitle>
+              
+      <!-- <ion-card-title>{{temple.Address}}</ion-card-title> -->
+    </ion-card-header>
+    <ion-card-content>
+    <!-- {{temple.DetailDescription}} -->
+    </ion-card-content>
+          </ion-card>
+       
+      </div>
+      
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
